@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block head %}
+    <title>Hufflepuff</title>
+<style>
+    body {
+      background-image: url("{{ url_for('static', filename='images/hufflepuff.png') }}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+     }
+    .text{
+         color: #ffffcc;
+         max-width: 1000px; /* Adjust the max-width to your needs */
+         margin: 0 auto;
+         padding: 20px;
+         line-height: 1.2;
+     }
+
+     .H{
+         text-align: center;
+         color:white;
+         margin-bottom: 30px;
+     }
+     .image {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         padding: 30px;
+     }
+</style>
+{% endblock %}
+{% block content %}
+    <div class="H"><h1> Hufflepuff</h1></div>
+    <div class="text">
+         <h3><em><big>Hufflepuff</big> is one of the four Houses of Hogwarts School of Witchcraft and Wizardry.ts founder was the medieval witch Helga Hufflepuff.Hufflepuff was the most inclusive among the four houses, valuing hard work, dedication, patience, loyalty, and fair play rather than a particular aptitude in its members.The emblematic animal was a badger,and yellow and black were its house colours.The Head of Hufflepuff was Pomona Sprout,and the Fat Friar was the House's patron ghost.</em></h3>
+    <div class="image">
+        <img src="{{ url_for('static', filename='images/h_flag.png') }}">
+    </div>
+
+     <h4><em>Hufflepuff corresponds roughly to the element of earth, and it is for that reason that the House colours were chosen: yellow represented wheat, while black was emblematic of soil. </em></h4>
+    </div>
+{% endblock %}

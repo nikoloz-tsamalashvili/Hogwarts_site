@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block head %}
+    <title>Slytherin</title>
+<style>
+    body {
+      background-image: url("{{ url_for('static', filename='images/slytherin.png') }}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+     }
+    .text{
+         color: #57ff93;
+         max-width: 1000px; /* Adjust the max-width to your needs */
+         margin: 0 auto;
+         padding: 20px;
+         line-height: 1.2;
+     }
+
+    .S{
+         text-align: center;
+         color: green;
+         margin-bottom: 30px;
+     }
+    .image {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         padding: 30px;
+     }
+</style>
+{% endblock %}
+{% block content %}
+    <div class="S"><h1> Slytherin</h1></div>
+    <div class="text">
+         <h3><em><big>Slytherin</big> is one of the four Houses at Hogwarts School of Witchcraft and Wizardry, founded by Salazar Slytherin.[1] In establishing the house, Salazar instructed the Sorting Hat to pick students who had a few particular characteristics he most valued. Those characteristics included cunning, resourcefulness, leadership, and ambition.The emblematic animal of the house was a snake and the house's colours were green and silver. </em></h3>
+    <div class="image">
+        <img src="{{ url_for('static', filename='images/s_flag.png') }}">
+    </div>
+
+     <h4><em> Slytherin corresponds roughly with the element of water with serpents being commonly associated with the sea and lochs in western European mythology, as well as serpents being physically fluid and flexible animals. being often associated with grey rain water.</em></h4>
+    </div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Search</title>
+<style>
+    body {
+      background-image: url("{{ url_for('static', filename='images/hogwarts_search.jpg') }}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+     }
+    .text{
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 100px;
+    }
+    .search{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        padding: 30px;
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="text">
+    <h2>you can search information about your favourite students</h2>
+</div>
+<div class="search">
+        <form method="POST" style="width:30%; margin-left: 10px">
+        <div class="form-group">
+          <input type="text" name="student" class="form-control" placeholder="Student name"><br>
+        </div>
+      <button type="submit" class="btn btn-primary">Search student</button>
+    </form>
+
+        {% with messages=get_flashed_messages() %}
+
+        {% for msg in messages %}
+
+            <p> {{msg}} </p>
+
+        {% endfor %}
+
+    {% endwith %} -->
+</div>
+
+
+
+{% endblock %}

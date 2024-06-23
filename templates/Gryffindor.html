@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block head %}
+    <title>Gryffindor</title>
+<style>
+     body {
+      background-image: url("{{ url_for('static', filename='images/gryffindor.png') }}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+     }
+    .text{
+             color: #f2f2a2;
+             max-width: 1000px; /* Adjust the max-width to your needs */
+             margin: 0 auto;
+             padding: 20px;
+             line-height: 1.2;
+         }
+    .G{
+          text-align: center;
+          color: #ffdd00;
+          margin-bottom: 30px;
+          margin-top: 20px;
+
+         }
+     .image {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+             padding: 30px;
+         }
+
+</style>
+{% endblock %}
+{% block content %}
+<div class="G"><h1> Gryffindor</h1></div>
+    <div class="text">
+         <h3><em><big>Gryffindor</big> is one of the four Houses of Hogwarts School of Witchcraft and Wizardry.The founder of the Gryffindor house was Godric Gryffindor. He founded the house based on different traits, such as courage, chivalry and determination. The emblematic animal is a lion, and its colours are red and gold. Minerva McGonagall is the most recent known Head of House. Sir Nicholas de Mimsy-Porpington, also known as "Nearly Headless Nick" is the house ghost.</em></h3>
+    <div class="image">
+        <img src="{{ url_for('static', filename='images/g_flag.png') }}">
+    </div>
+
+     <h4><em> Gryffindor corresponds roughly to the element of fire, and it is for that reason that the colours red and gold were chosen to represent the House.The colour of fire corresponds to that of a lion as well, red representing the mane and tail and gold representing the coat.</em></h4>
+    </div>
+{% endblock %}

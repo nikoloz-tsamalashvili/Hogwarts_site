@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Result</title>
+<style>
+    body {
+      background-image: url("{{ url_for('static', filename='images/hogwarts_search.jpg') }}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      text-align: center;
+     }
+
+    .text{
+        margin-top: 150px;
+        color: white;
+        text-align: center;
+    }
+
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 60%;
+        padding: 10px;
+        height: 200px;
+        text-align: center;
+        color: white;
+
+    }
+    .info{
+        margin-top: 20px;
+        color: white;
+        text-align: center;
+    }
+
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="text">
+    <h1><b>Search Results</b></h1>
+</div>
+
+    <div class="info"> <h3>About student: </h3></div>
+
+
+<div class="center">
+
+{% if info %}
+    {% for character in info %}
+        <h5>Name: {{ character.name }}</h5>
+        <h5>Species: {{ character.species }}</h5>
+        <h5>Gender: {{ character.gender }}</h5>
+        <h5>House: {{ character.house }}</h5>
+        <h5>Date of Birth: {{ character.dateOfBirth }}</h5>
+        <h5>Ancestry: {{ character.ancestry }}</h5>
+        <h5>Wand: </h5>
+        <ul>
+            <li>Wood: {{ character.wand.wood }}</li>
+            <li>Core: {{ character.wand.core }}</li>
+            <li>Length: {{ character.wand.length }}</li>
+        </ul>
+        <h5>Patronus: {{ character.patronus }}</h5>
+    {% endfor %}
+{% else %}
+    <p>No characters found.</p>
+{% endif %}
+
+{% endblock %}
+
+</div>
+

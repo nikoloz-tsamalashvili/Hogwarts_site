@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Hogwarts</title>
+<style>
+     body {
+      background-image: url("{{ url_for('static', filename='images/hogwarts.png') }}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+     }
+     .text {
+         text-align: center;
+         color: #cccccc;
+         max-width:100%;
+     }
+     img{
+         width: 650px;
+         height: 400px;
+     }
+     p{
+         max-width: 1200px;
+         margin: auto;
+         padding: 20px;
+     }
+</style>
+{% endblock %}
+{% block content %}
+<div class="text">
+    <h1>Welcome to Hogwarts</h1>
+    <img src= "{{ url_for('static', filename='images/flags.png') }}" alt="hogwarts">
+<h2>About Hogwarts</h2>
+    <p>Hogwarts was founded over a thousand years ago by four powerful wizards: Godric Gryffindor, Salazar Slytherin, Rowena Ravenclaw and Helga Hufflepuff. They chose to split the students into four ‘houses’, each bearing their surnames and featuring young wizards and witches who displayed abilities and personalities they wanted to nurture.
+        To do this, Godric Gryffindor used his magical hat – henceforward known as the Sorting Hat – to decide which children should go into which house, and so it has been ever since with a yearly Sorting Ceremony that places each new pupil into their own new home.
+        The four houses have different entry requirements, and nobody summed them up better than the old Sorting Hat itself in its welcoming song... </p>
+</div>
+{% endblock %}

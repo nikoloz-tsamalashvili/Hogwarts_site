@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block head %}
+    <title>Ravenclaw</title>
+<style>
+    body {
+      background-image: url("{{ url_for('static', filename='images/ravenclaw.png') }}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+     }
+    .text{
+         color: #9cdcfe;
+         max-width: 1000px; /* Adjust the max-width to your needs */
+         margin: 0 auto;
+         padding: 20px;
+         line-height: 1.2;
+     }
+    .R{
+         text-align: center;
+         color: #30799B;
+         margin-bottom: 30px;
+     }
+    .image {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         padding: 30px;
+     }
+</style>
+{% endblock %}
+
+{% block content %}
+    <div class="R"><h1> Recenclaw</h1></div>
+    <div class="text">
+         <h3><em><big>Ravenclaw</big> is one of the four Houses of Hogwarts School of Witchcraft and Wizardry.Its founder was the medieval witch Rowena Ravenclaw.[1] Members of this house were characterised by their wit, learning, and wisdom. The emblematic animal symbol was an eagle, and blue and bronze were its colours.The Head of Ravenclaw was Filius Flitwick,and the House ghost was the Grey Lady,real name Helena Ravenclaw, daughter of Rowena.</em></h3>
+    <div class="image">
+        <img src="{{ url_for('static', filename='images/r_flag.png') }}">
+    </div>
+
+     <h4><em>Ravenclaw corresponded roughly to the element of air, and it was for that reason that the House colours were chosen; blue and bronze represented the sky and eagle feathers respectively, both having much to do with air. The Ravenclaw points hourglass contained blue sapphires.</em></h4>
+    </div>
+{% endblock %}
